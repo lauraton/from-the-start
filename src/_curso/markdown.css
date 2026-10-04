@@ -1,0 +1,20 @@
+/* Estilos para mostrar los README.md dentro de la app del curso */
+.md-teoria { line-height: 1.7; color: #1e293b; }
+.md-teoria h1 { font-size: 1.9rem; font-weight: 800; margin: 0 0 1rem; }
+.md-teoria h2 { font-size: 1.4rem; font-weight: 700; margin: 2rem 0 .75rem; padding-bottom: .3rem; border-bottom: 1px solid #e2e8f0; }
+.md-teoria h3 { font-size: 1.15rem; font-weight: 700; margin: 1.5rem 0 .5rem; }
+.md-teoria p, .md-teoria ul, .md-teoria ol, .md-teoria table, .md-teoria pre, .md-teoria blockquote { margin: .75rem 0; }
+.md-teoria ul { list-style: disc; padding-left: 1.5rem; }
+.md-teoria ol { list-style: decimal; padding-left: 1.5rem; }
+.md-teoria a { color: #0284c7; text-decoration: underline; }
+.md-teoria hr { margin: 2rem 0; border-color: #e2e8f0; }
+.md-teoria code { background: #f1f5f9; padding: .1rem .35rem; border-radius: .3rem; font-size: .88em; }
+.md-teoria pre { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: .75rem; overflow-x: auto; font-size: .85rem; line-height: 1.55; }
+.md-teoria pre code { background: none; padding: 0; color: inherit; }
+.md-teoria blockquote { border-left: 4px solid #38bdf8; background: #f0f9ff; padding: .5rem 1rem; border-radius: 0 .5rem .5rem 0; }
+.md-teoria blockquote p { margin: .25rem 0; }
+.md-teoria table { width: 100%; border-collapse: collapse; font-size: .92rem; display: block; overflow-x: auto; }
+.md-teoria th, .md-teoria td { border: 1px solid #e2e8f0; padding: .45rem .7rem; text-align: left; vertical-align: top; }
+.md-teoria th { background: #f8fafc; }
+.md-teoria details { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: .5rem; padding: .5rem .8rem; margin: .5rem 0; }
+.md-teoria summary { cursor: pointer; font-weight: 600; }
