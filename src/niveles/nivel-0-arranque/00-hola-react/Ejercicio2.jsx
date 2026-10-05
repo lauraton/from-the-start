@@ -13,17 +13,23 @@
 import { useState } from 'react'
 
 // TODO PARTE A: escribí tus respuestas acá
-const respuestaHMR = '...'
-const respuestaF5 = '...'
+const respuestaHMR = 'Así es'
+const respuestaF5 = 'No. El contador NO se mantiene'
 
 // TODO PARTE B: completá las descripciones
 const estructura = [
-  { nombre: 'index.html', descripcion: '...' },
-  { nombre: 'src/main.jsx', descripcion: '...' },
-  { nombre: 'src/App.jsx', descripcion: '...' },
-  { nombre: 'public/', descripcion: '...' },
-  { nombre: 'src/components/', descripcion: '...' },
-  { nombre: 'src/hooks/', descripcion: '...' },
+  { nombre: 'index.html', descripcion: 'Carga el javascript de la app' },
+  {
+    nombre: 'src/main.jsx',
+    descripcion: 'Es el punto de entrada (donde todos los comps se encuentran)',
+  },
+  { nombre: 'src/App.jsx', descripcion: 'Es el componente raíz' },
+  { nombre: 'public/', descripcion: 'Es donde se encuentran elementos estáticos' },
+  {
+    nombre: 'src/components/',
+    descripcion: 'Es donde están aquellos componentes esperando a ser usados',
+  },
+  { nombre: 'src/hooks/', descripcion: 'Es donde se encuentran las custom hooks' },
 ]
 
 function Ejercicio2() {
@@ -32,15 +38,19 @@ function Ejercicio2() {
   return (
     <div className="space-y-6">
       <button
-        className="rounded-full bg-pink-500 px-5 py-2 font-bold text-white"
+        className="rounded-full bg-emerald-500 px-5 py-2 font-bold text-white"
         onClick={() => setLikes(likes + 1)}
       >
         ❤️ Me gusta ({likes})
       </button>
 
       <div className="space-y-1 text-sm">
-        <p><b>¿Se mantuvo el contador?</b> {respuestaHMR}</p>
-        <p><b>¿Y con F5?</b> {respuestaF5}</p>
+        <p>
+          <b>¿Se mantuvo el contador?</b> {respuestaHMR}
+        </p>
+        <p>
+          <b>¿Y con F5?</b> {respuestaF5}
+        </p>
       </div>
 
       <ul className="divide-y rounded-xl border">
