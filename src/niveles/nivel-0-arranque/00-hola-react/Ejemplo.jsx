@@ -12,13 +12,15 @@
 import { useState } from 'react'
 
 function Ejemplo() {
-  const nombre = 'React'
+  const nombre = 'Laurato'
   const [numero, setNumero] = useState(0)
 
   return (
     <div className="space-y-4">
       {/* Las llaves {} meten JavaScript dentro del JSX */}
-      <h1 className="text-3xl font-bold">¡Hola, {nombre}! 👋</h1>
+      <h1 className="text-3xl font-bold">
+        ¡Hola, {nombre}! 👋. Sumá cuántas veces pensaste en él hoy
+      </h1>
 
       <p className="text-slate-600">
         Este texto sale de <code className="rounded bg-slate-100 px-1">Ejemplo.jsx</code>.

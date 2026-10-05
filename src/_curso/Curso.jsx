@@ -6,9 +6,10 @@
  *  entiendas ni la toques: vos trabajás en src/niveles y src/playground.
  * ─────────────────────────────────────────────────────────────
  */
-import { Component, Suspense, lazy, useEffect, useMemo, useState } from 'react'
+import { Suspense, lazy, useEffect, useMemo, useState } from 'react'
 import { marked } from 'marked'
 import { LECCIONES, NIVELES } from './temario'
+import AtrapaErrores from './AtrapaErrores'
 import './markdown.css'
 
 // import.meta.glob es una función de Vite que importa muchos archivos a la vez
@@ -68,33 +69,15 @@ function armarTemario() {
   return niveles
 }
 
-const cacheLazy = new Map()
+// La app del curso lee el texto de tus archivos para mostrar la consigna, así que
+// cuando guardás un ejercicio Vite también recarga ESTE módulo. Guardamos el caché
+// en import.meta.hot.data para reutilizar los mismos componentes y que el HMR
+// conserve el estado (si no, el contador volvería a 0 en cada Ctrl+S).
+const cacheLazy = import.meta.hot?.data.cacheLazy ?? new Map()
+if (import.meta.hot) import.meta.hot.data.cacheLazy = cacheLazy
 function componenteLazy(clave, cargar) {
   if (!cacheLazy.has(clave)) cacheLazy.set(clave, lazy(cargar))
   return cacheLazy.get(clave)
-}
-
-class AtrapaErrores extends Component {
-  state = { error: null }
-  static getDerivedStateFromError(error) {
-    return { error }
-  }
-  render() {
-    if (this.state.error)
-      return (
-        <div className="rounded-xl border border-red-300 bg-red-50 p-4 text-red-800">
-          <p className="font-bold">💥 Tu componente tiró un error:</p>
-          <pre className="mt-2 whitespace-pre-wrap text-sm">
-            {String(this.state.error?.message || this.state.error)}
-          </pre>
-          <p className="mt-3 text-sm">
-            Arreglalo en VSCode y guardá: se recarga solo. Mirá también la consola
-            del navegador (F12).
-          </p>
-        </div>
-      )
-    return this.props.children
-  }
 }
 
 function leer(clave, def) {

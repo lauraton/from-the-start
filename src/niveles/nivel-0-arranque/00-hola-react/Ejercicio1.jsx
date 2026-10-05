@@ -14,9 +14,16 @@
 function Ejercicio1() {
   return (
     <div className="max-w-sm rounded-2xl bg-gradient-to-br from-sky-500 to-indigo-600 p-6 text-white shadow-xl">
-      <h1 className="text-2xl font-bold">Tu Nombre</h1>
-      <p className="opacity-90">Estudiante de ...</p>
-      {/* TODO: agregá acá un <p> con tu hobby */}
+      <h1 className="text-2xl font-bold">🥵 Laurato 🥵</h1>
+      <p className="opacity-90">
+        Estudiante de la Tecnicatura Superior en Desarrollo de Software Multiplataforma
+      </p>
+      <br />
+      <h1>Hobby:</h1>
+      <p>
+        Mi hobby es mirarlo a los ojos y admirar su sonrisa mientras le cuento algún
+        chismesito... de la persona que le gusta (así de migajero soy)
+      </p>
     </div>
   )
 }
