@@ -15,26 +15,30 @@
 
 function Ejercicio1() {
   const stock = 0
+  const cajaVioleta = { background: 'violet', padding: 12 }
 
   return (
     <div>
       {/* 🐛 1 */}
-      <div style="background: violet; padding: 12px">Caja violeta</div>
+      <div style={cajaVioleta}>Caja violeta</div>
 
       {/* 🐛 2 */}
-      <h2 class="mt-4 text-xl font-bold">Formulario</h2>
+      <h2 className="mt-4 text-xl font-bold">Formulario</h2>
 
       {/* 🐛 3 */}
-      <label for="nombre">Nombre</label>
+      <label htmlFor="nombre">Nombre</label>
       <input id="nombre" className="ml-2 rounded border px-2" />
 
       {/* 🐛 4 */}
-      <button className="ml-2 rounded bg-slate-800 px-3 text-white" onclick={() => alert('¡Funciona!')}>
+      <button
+        className="ml-2 rounded bg-slate-800 px-3 text-white"
+        onClick={() => alert('¡Funciona!')}
+      >
         Enviar
       </button>
 
       {/* 🐛 5 */}
-      <div className="mt-4">{stock && <p>Quedan {stock} unidades</p>}</div>
+      <div className="mt-4">{stock > 0 && <p>Quedan {stock} unidades</p>}</div>
     </div>
   )
 }

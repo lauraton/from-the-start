@@ -6,10 +6,10 @@
  */
 
 function Ejemplo() {
-  const nombre = 'Ana'
-  const edad = 21
-  const logueado = true
-  const mensajes = 3
+  const nombre = 'Laurato'
+  const edad = 66
+  const logueado = false
+  const mensajes = 0
   const estiloCaja = { backgroundColor: '#fef3c7', padding: 12, borderRadius: 12 }
 
   return (
@@ -30,7 +30,10 @@ function Ejemplo() {
       <div style={estiloCaja} className="mt-4">
         Caja con style en línea
       </div>
-      <div style={{ color: 'white', background: 'teal', padding: 8 }} className="mt-2 rounded">
+      <div
+        style={{ color: 'white', background: 'teal', padding: 8 }}
+        className="mt-2 rounded"
+      >
         Objeto escrito directo: style=&#123;&#123; ... &#125;&#125;
       </div>
 
